@@ -9,7 +9,7 @@
 #include "unit_p.h"
 #include "unitcategory.h"
 
-#include <KI18n/klocalizedstring.h>
+#include <KLocalizedString>
 
 namespace KUnitConversion
 {
@@ -152,7 +152,7 @@ CategoryId Unit::categoryId() const
 UnitCategory Unit::category() const
 {
     if (d) {
-        return d->m_category;
+        return UnitCategory(d->m_category);
     }
     return UnitCategory();
 }

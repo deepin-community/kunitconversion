@@ -3,6 +3,7 @@ libKF5UnitConversion.so.5 libkf5unitconversion5 #MINVER#
 * Build-Depends-Package: libkf5unitconversion-dev
  _ZN15KUnitConversion12UnitCategory13addCommonUnitERKNS_4UnitE@Base 4.98.0
  _ZN15KUnitConversion12UnitCategory14addDefaultUnitERKNS_4UnitE@Base 4.98.0
+ _ZN15KUnitConversion12UnitCategory19syncConversionTableENSt6chrono8durationIlSt5ratioILl1ELl1EEEE@Base 5.90.0
  _ZN15KUnitConversion12UnitCategory7addUnitERKNS_4UnitE@Base 4.98.0
  _ZN15KUnitConversion12UnitCategory7convertERKNS_5ValueENS_6UnitIdE@Base 4.98.0
  _ZN15KUnitConversion12UnitCategory7convertERKNS_5ValueERK7QString@Base 4.96.0
@@ -44,6 +45,7 @@ libKF5UnitConversion.so.5 libkf5unitconversion5 #MINVER#
  _ZN15KUnitConversion5ValueD1Ev@Base 4.96.0
  _ZN15KUnitConversion5ValueD2Ev@Base 4.96.0
  _ZN15KUnitConversion5ValueaSERKS0_@Base 4.96.0
+ _ZN15KUnitConversion8Currency25lastConversionTableUpdateEv@Base 5.90.0
  _ZN15KUnitConversion9ConverterC1ERKS0_@Base 4.98.0
  _ZN15KUnitConversion9ConverterC1Ev@Base 4.98.0
  _ZN15KUnitConversion9ConverterC2ERKS0_@Base 4.98.0
@@ -54,6 +56,7 @@ libKF5UnitConversion.so.5 libkf5unitconversion5 #MINVER#
  _ZNK15KUnitConversion12UnitCategory11defaultUnitEv@Base 4.96.0
  _ZNK15KUnitConversion12UnitCategory11descriptionEv@Base 4.96.0
  _ZNK15KUnitConversion12UnitCategory15mostCommonUnitsEv@Base 4.96.0
+ _ZNK15KUnitConversion12UnitCategory24hasOnlineConversionTableEv@Base 5.90.0
  _ZNK15KUnitConversion12UnitCategory2idEv@Base 4.96.0
  _ZNK15KUnitConversion12UnitCategory4nameEv@Base 4.96.0
  _ZNK15KUnitConversion12UnitCategory4unitENS_6UnitIdE@Base 4.98.0

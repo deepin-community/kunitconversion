@@ -8,16 +8,17 @@
 #include "acceleration_p.h"
 #include "unit_p.h"
 
-#include <KI18n/klocalizedstring.h>
+#include <KLocalizedString>
 
 namespace KUnitConversion
 {
-Acceleration::Acceleration()
-    : CustomCategory(AccelerationCategory, i18n("Acceleration"), i18n("Acceleration"))
+UnitCategory Acceleration::makeCategory()
 {
+    auto c = UnitCategoryPrivate::makeCategory(AccelerationCategory, i18n("Acceleration"), i18n("Acceleration"));
+    auto d = UnitCategoryPrivate::get(c);
     KLocalizedString symbolString = ki18nc("%1 value, %2 unit symbol (acceleration)", "%1 %2");
 
-    addDefaultUnit(CustomUnit(AccelerationCategory,
+    d->addDefaultUnit(UnitPrivate::makeUnit(AccelerationCategory,
                               MetresPerSecondSquared,
                               1,
                               i18nc("acceleration unit symbol", "m/s²"),
@@ -27,7 +28,7 @@ Acceleration::Acceleration()
                               ki18nc("amount in units (real)", "%1 meters per second squared"),
                               ki18ncp("amount in units (integer)", "%1 meter per second squared", "%1 meters per second squared")));
 
-    addCommonUnit(CustomUnit(AccelerationCategory,
+    d->addCommonUnit(UnitPrivate::makeUnit(AccelerationCategory,
                              FeetPerSecondSquared,
                              0.3048,
                              i18nc("acceleration unit symbol", "ft/s²"),
@@ -37,7 +38,7 @@ Acceleration::Acceleration()
                              ki18nc("amount in units (real)", "%1 feet per second squared"),
                              ki18ncp("amount in units (integer)", "%1 foot per second squared", "%1 feet per second squared")));
 
-    addUnit(CustomUnit(AccelerationCategory,
+    d->addUnit(UnitPrivate::makeUnit(AccelerationCategory,
                        StandardGravity,
                        9.80665,
                        i18nc("acceleration unit symbol", "g"),
@@ -46,6 +47,8 @@ Acceleration::Acceleration()
                        symbolString,
                        ki18nc("amount in units (real)", "%1 times standard gravity"),
                        ki18ncp("amount in units (integer)", "%1 standard gravity", "%1 times standard gravity")));
+
+    return c;
 }
 
 } // KUnitConversion namespace

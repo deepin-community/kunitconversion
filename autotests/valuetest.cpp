@@ -14,6 +14,7 @@ void ValueTest::initTestCase()
 {
     qputenv("KF5UNITCONVERT_NO_DOWNLOAD", "1");
     QStandardPaths::setTestModeEnabled(true);
+    QLocale::setDefault(QLocale::c());
 
     v1 = Value(3.1415, Kilometer);
     v2 = Value(6.1415, QStringLiteral("m"));
@@ -57,7 +58,7 @@ void ValueTest::testCurrencyNotDownloaded()
 {
     // ensure that no local conversion table is available
     const QString cache = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/libkunitconversion/currency.xml");
-    if (!QFile::exists(cache)) {
+    if (QFile::exists(cache)) {
         QFile::remove(cache);
     }
 
