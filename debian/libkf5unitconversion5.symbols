@@ -3,7 +3,8 @@ libKF5UnitConversion.so.5 libkf5unitconversion5 #MINVER#
 * Build-Depends-Package: libkf5unitconversion-dev
  _ZN15KUnitConversion12UnitCategory13addCommonUnitERKNS_4UnitE@Base 4.98.0
  _ZN15KUnitConversion12UnitCategory14addDefaultUnitERKNS_4UnitE@Base 4.98.0
- _ZN15KUnitConversion12UnitCategory19syncConversionTableENSt6chrono8durationIlSt5ratioILl1ELl1EEEE@Base 5.90.0
+ (arch=!armel !armhf !i386 !mipsel !hppa !hurd-i386 !m68k !powerpc !sh4 !x32)_ZN15KUnitConversion12UnitCategory19syncConversionTableENSt6chrono8durationIlSt5ratioILl1ELl1EEEE@Base 5.90.0
+ (arch=armel armhf i386 mipsel hppa hurd-i386 m68k powerpc sh4 x32)_ZN15KUnitConversion12UnitCategory19syncConversionTableENSt6chrono8durationIxSt5ratioILx1ELx1EEEE@Base 5.90.0
  _ZN15KUnitConversion12UnitCategory7addUnitERKNS_4UnitE@Base 4.98.0
  _ZN15KUnitConversion12UnitCategory7convertERKNS_5ValueENS_6UnitIdE@Base 4.98.0
  _ZN15KUnitConversion12UnitCategory7convertERKNS_5ValueERK7QString@Base 4.96.0

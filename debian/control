@@ -7,14 +7,14 @@ Uploaders: Aurélien COUDERC <coucouf@debian.org>,
 Build-Depends: cmake (>= 3.16~),
                debhelper-compat (= 13),
                doxygen,
-               extra-cmake-modules (>= 5.90.0~),
-               libkf5i18n-dev (>= 5.90.0~),
+               extra-cmake-modules (>= 5.103.0~),
+               libkf5i18n-dev (>= 5.103.0~),
                libqt5sql5-sqlite,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
                qtbase5-dev (>= 5.15.2~),
                qttools5-dev,
                qttools5-dev-tools (>= 5.4),
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Homepage: https://invent.kde.org/frameworks/kunitconversion
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kunitconversion
 Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/kunitconversion.git
@@ -23,7 +23,7 @@ Rules-Requires-Root: no
 Package: libkf5unitconversion-data
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends},
 Description: Support for unit conversion.
  Library to help applications in doing conversions of
  values in different measure units.
@@ -33,22 +33,22 @@ Description: Support for unit conversion.
 Package: libkf5unitconversion-dev
 Section: libdevel
 Architecture: any
-Depends: libkf5i18n-dev (>= 5.90.0~),
+Depends: libkf5i18n-dev (>= 5.103.0~),
          libkf5unitconversion5 (= ${binary:Version}),
          qtbase5-dev (>= 5.15.2~),
          ${misc:Depends},
-Recommends: libkf5unitconversion-doc (= ${source:Version})
+Recommends: libkf5unitconversion-doc (= ${source:Version}),
 Description: development files for kunitconversion
  Library to help applications in doing conversions of
  values in different measure units.
  .
  Contains development files for kunitconversion.
-Breaks: libkf5kdelibs4support-dev (<< 5.54)
+Breaks: libkf5kdelibs4support-dev (<< 5.54),
 
 Package: libkf5unitconversion-doc
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
 Description: Support for unit conversion (documentation)
  Library to help applications in doing conversions of
  values in different measure units.
@@ -65,4 +65,4 @@ Depends: libkf5unitconversion-data (= ${source:Version}),
 Description: Support for unit conversion.
  Library to help applications in doing conversions of
  values in different measure units.
-Breaks: libkf5kdelibs4support5 (<< 5.42), libkf5kdelibs4support5-bin (<< 5.42)
+Breaks: libkf5kdelibs4support5 (<< 5.42), libkf5kdelibs4support5-bin (<< 5.42),
